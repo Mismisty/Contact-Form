@@ -1,0 +1,401 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Green-200: /*(lighter)*/ hsl(148, 38%, 91%);
+--Green-600: /*(medium)*/ hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 54%);
+
+--hover-Green-600: /*(medium)*/ hsl(169, 82%, 15%);
+
+--White: hsl(0, 0%, 100%);
+--Grey-med-500: /*(medium):*/ hsl(186, 15%, 59%);
+--Grey-darker-900:/* (darker):*/ hsl(187, 24%, 22%);
+
+--fontfamily: "Karla", sans-serif;
+
+--fontlabels: 16px;
+--font-weight: 400;
+--fontWeight: 700;
+}
+
+
+
+.desktop {
+   display: none;
+    margin: auto;
+    
+    opacity: 0.5;
+}
+
+body {
+    font-family: var(--fontfamily);
+    font-size: 15px;
+    background-color: var(--Green-200);
+    overflow-x:hidden;
+}
+
+form {
+    width: 350px;
+    margin: 10em auto;
+    background-color: var(--White);
+    border-radius: 7px;
+    padding: 1em 0;
+}
+
+
+h1 {
+    padding: 1em;
+}
+
+.fname {
+    margin-top: -0.5em;
+}
+
+label {
+    font-size: var(--fontlabels);
+    color: var(--Grey-darker-900);
+    display: inline-block;
+    margin: .5em 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.asterisk {
+    margin-left: -1.5em;
+    color: var(--Green-600);
+}
+
+input[type="text"], input[type="email"]{
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5em;
+    width: 90%;
+    padding: 1em;
+    outline: none;
+    border: none;
+    border-radius: 0.5em;
+    border: 1px solid var(--Grey-med-500);
+    cursor: pointer;
+}
+
+input[type="text"]:hover, input[type="email"]:hover{
+    border: 2px solid var(--Green-600);
+}
+
+textarea:hover {
+    border: 1px solid var(--Green-600);
+}
+
+/*
+?-------ERROR STATES--------
+*/
+
+.error-msg, .email-error, .error-select-query{
+    font-size: 12px;
+    color: var(--Red);
+    margin: 0.5em 1.5em;
+    height: 1rem;
+}
+
+.fname .error-msg, 
+.lname .error-msg {
+    margin-top: -0.5em;
+}
+
+.email .error-msg {
+    margin-top: -1em;
+}
+
+.empty-checkbox {
+
+}
+
+.error-msg, .email-error,
+ .error-select-query,
+ .empty-checkbox {
+    display: none;
+}
+
+/*
+?--------FOCUS STATES----------
+*/
+input:focus,
+textarea:focus {
+    outline: 1px solid hsl(169, 82%, 27%);
+}
+
+
+/*
+?-----------QUERY SECTION---------------
+*/
+
+label[for="query type"] {
+    margin-bottom: 0.2em;
+    
+}
+
+.star {
+    margin-left: 0.5em;
+    color: var(--Green-600);
+}
+
+.input-radio {
+    margin: 1em;
+    padding: 0.5em;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 0.5em;
+    cursor: pointer;
+    
+}
+
+input[type="radio"]{
+    margin-left: 1.5em;
+    accent-color: var(--Green-600);
+    cursor: pointer;
+    
+}
+input[type="radio"]:checked {
+   /* background-color: red;*/
+    outline: none;
+}
+
+
+.option1, .option2 {
+    margin-left: -1em;
+}
+
+/*
+?----------LEAVE MEASSAGE SECTION-----------
+*/
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 90%;
+    margin: auto;
+    padding: 0.5em;
+    height: 20em;
+    border: none;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 7px;
+    resize: none;
+}
+
+/*
+?---------CHECKBOX SECTION---------
+*/
+
+.checkbox {
+    display: flex;
+    padding: 1em;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--Green-600);
+    outline: none;
+    cursor: pointer;
+}
+
+label[for="checkbox"]{
+    color: var(--Grey-darker-900);
+    line-height: 1.5em;
+
+}
+
+.bottom-asterisk {
+    color: var(--Green-600);
+    padding: 0 0.5em;
+}
+
+.empty-checkbox{
+    color: var(--Red);
+    padding: 1em;
+    height: 1rem;
+}
+
+/*
+?---------SUBMIT SECTION---------
+*/
+
+.submit {
+    display: block;
+    margin: 2.5em auto;
+    padding: 1em;
+    width: 90%;
+    color: var(--White);
+    background-color: var(--Green-600);
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: var(--hover-Green-600);
+}
+
+/*
+?---------SUCCESS SECTION------------
+*/
+
+.message-success{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95%;
+    padding: 1.5em;
+    text-align: left;
+    background-color: var(--Grey-darker-900);
+    border-radius: 15px;
+    display: none;
+}
+
+.message-sent {
+    display: flex;
+    gap: 12px;
+    justify-content: left;
+    
+}
+
+h2 {
+    color: var(--White);
+
+}
+
+.message-success p {
+    font-family: var(--fontfamily);
+    font-weight: var(--font-weight);
+    color: var(--Grey-med-500);
+    padding: 1em 0;
+    text-align: left;
+}
+
+
+
+.attribution{
+    margin-top: 50em;
+}
+
+/*
+!----------DESKTOP SECTION----------
+*/
+
+@media screen and (min-width: 768px){
+    form {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 760px;
+        top: 58%;
+        display: block;
+        overflow-x: hidden;
+    }
+
+    .enter-name {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        width: 100%;
+        padding-left: 0.5em;
+        
+    }
+
+    input[type="text"]{
+        width: 25em;
+        margin-bottom: 1em;
+        margin-left: 1.5em;
+        
+    }
+
+    .lname {
+        margin-top: -0.4em;
+    }
+
+    input[type="email"] {
+        width: 92%;
+        
+    }
+
+    label[for="email"]{
+        padding-left: 0.5em;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        gap: 0.3em;
+        width: 97%;
+        padding-left: 1em;
+        
+    }
+
+    label[for="query type"] {
+        margin-bottom: 0em;
+        padding-left: 0.5em;
+    }
+
+    
+
+    .input-radio {
+        margin: 1em 1em;
+        padding: 0.5em;
+        width: 50%;
+        border: 1px solid hsl(186, 15%, 59%);
+        border-radius: 0.5em;
+        cursor: pointer;
+    }
+    
+    .message-success{
+        width: 468px;
+        top: 14%;
+        
+    }
+
+    label[for="message"] {
+        padding-left: 0.7em;
+        padding-top: 0.5em;
+    }
+
+    textarea {
+        height: 10em;
+        width: 91%;
+    }
+
+    .checkbox {
+        padding-left: 2em;
+        
+    }
+
+    /*
+    ?------ERROR STATES-----
+    */
+
+    .error-msg, .email-error{
+        padding-left: 1em;
+
+    }
+
+     .email-error{
+        margin-top: -0.5em;
+        
+    }
+
+    .error-select-query {
+        position: absolute;
+        padding-top: 5em;
+    }
+
+    .empty-checkbox {
+        margin-left: 1em;
+    }
+
+
+}
+

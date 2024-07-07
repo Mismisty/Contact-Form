@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="desktop">
+    <img src="design/desktop-design.jpg">
+  </div>
+
+  <main>
+    <form id="contact-form" novalidate="novalidate">
+      <legend>
+        <h1>Contact Us</h1>
+      </legend>
+    <div class="enter-name">
+      <div class="fname">
+        <label for="fname">First Name</label>
+        <span class="asterisk">&#x2a;</span>
+        <input type="text" id="fname" name="fname">
+        <div class="error-msg">This field is required</div>
+      </div>
+
+      <div class="lname">
+        <label for="lname">Last Name</label>
+        <span class="asterisk">&#x2a;</span>
+        <input type="text" id="lname" name="lname">
+        <div class="error-msg hidden">This field is required</div>
+      </div>
+    </div>
+
+      <div class="email">
+        <label for="email">Email Address</label>
+        <span class="asterisk">&#x2a;</span>
+        <input type="email" id="email">
+        <div class="error-msg">This field is required</div>
+        <div class="email-error" id="valid-email">Please enter a valid email address</div>
+      </div>
+
+    <div class="query">
+      <label for="query type">Query Type<span class="star">&#x2a;</span></label>
+    <div class="options">
+      <div class="input-radio">
+        <input type="radio" name="query" id="option1" value="enquiry">
+        <label for="query type"><span class="option1">General Enquiry</span></label>
+      </div>
+
+      <div class="input-radio">
+        <input type="radio"  name="query" id="option2" value="support">
+        <label for="query type"><span class="option2">Support Request</span></label>
+      </div>
+      <div class="error-select-query" id="select-error">Please select a query type</div>
+    </div>
+  </div>
+
+    <div class="message">
+      <label for="message">Message<span class="star">&#x2a;</span></label>
+      <textarea id="message" name="message" rows="5" cols="25"></textarea>
+      <div class="error-msg">This field is required</div>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox" name="checkbox">
+      <label for="checkbox">I consent to being contacted by the team<span class="bottom-asterisk">&#x2a;</span></label>
+    </div>
+    <div class="empty-checkbox">To submit this form, please consent to being contacted</div>
+
+    <button type="submit" class="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <div class="message-success" id="success-message">
+      <div class="message-sent">
+        <img src="assets/images/icon-success-check.svg">
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Kim Carney</a>.
+    </div>
+</footer>
+
+<script src="main.js">
+</script>
+</body>
+
+
+</html>
